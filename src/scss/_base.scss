@@ -1,0 +1,102 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+
+.container {
+	max-width: 1170px;
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	font-family: 'Montserrat', sans-serif;
+	color: black;
+	font-size: 15px;
+	font-weight: bold;
+
+	a {
+		text-decoration: none;
+		color: black;
+	}
+
+	a:hover {
+		color: #b61984;
+	}
+
+}
+
+.top {
+	background: url('../img/background0.png') no-repeat, url('../img/background1.png') no-repeat bottom;
+	background-size: contain;
+
+}
+
+
+
+.header {
+	.header-flex {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.header_nav ul li,
+	.header_contacts .contacts__item {
+		display: inline;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.header_contacts a:hover {
+		color: #b61984;
+	}
+}
+
+.header_nav ul li {
+	color: chocolate;
+}
+
+.main {
+	background: url('../img/home_inner_02.png') no-repeat;
+	background-size: contain;
+	background-position-x: center;
+}
+
+.hero {
+	.hero-flex {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.description {
+		font-size: 20px;
+		text-align: center;
+
+		.hero__button {
+			background-color: #b61984;
+			color: #ffffff;
+			padding: 15px 60px;
+			border: 1px solid #b61984;
+			border-radius: 50px;
+		}
+
+		.hero__button:hover {
+			background-color: #ffffff;
+			color: #b61984;
+		}
+	}
+
+	h1 {
+		text-transform: uppercase;
+		font-family: 'Fredoka One', cursive;
+		font-weight: bold;
+		color: #ffcf47;
+		font-size: 50px;
+	}
+}
