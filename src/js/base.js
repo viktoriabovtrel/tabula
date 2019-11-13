@@ -1,7 +1,6 @@
 /* для адаптивки*/
 var slides = document.querySelectorAll('.caption');
 var prevBtn = document.querySelector('.left-button');
-console.log(prevBtn);
 var nextBtn = document.querySelector('.right-button');
 var slideIndex = 1;
 showSlides(slideIndex);
