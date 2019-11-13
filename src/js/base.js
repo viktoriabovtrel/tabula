@@ -1,7 +1,8 @@
-/* для адаптивки
-var slides = document.querySelectorAll('.caption_item');
-var prevBtn = document.getElementById('left-button');
-var nextBtn = document.getElementById('right-button');
+/* для адаптивки*/
+var slides = document.querySelectorAll('.caption');
+var prevBtn = document.querySelector('.left-button');
+console.log(prevBtn);
+var nextBtn = document.querySelector('.right-button');
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -28,8 +29,8 @@ prevBtn.onclick = function (){
 nextBtn.onclick = function (){
     plusSlides(1);
 }
-*/
 
+/*
 
 var captionRight = document.querySelector('.caption-right');
 var captionLeft = document.querySelector('.caption-left');
@@ -44,5 +45,4 @@ rightBtn.addEventListener('click', typeme);
 function typeme() {
     captionRight.toggleAttribute('hidden');
 }
-
-
+*/

@@ -126,8 +126,7 @@
 	.courses {
 		position: relative;
 
-		.caption-left,
-		.caption-right {
+		.caption {
 			position: absolute;
 			transition: all ease 1s;
 			display: flex;
@@ -173,3 +172,4 @@
 		}
 	}
 }
+
