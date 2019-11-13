@@ -27,5 +27,22 @@ prevBtn.onclick = function (){
 
 nextBtn.onclick = function (){
     plusSlides(1);
-}*/
+}
+*/
+
+
+var captionRight = document.querySelector('.caption-right');
+var captionLeft = document.querySelector('.caption-left');
+
+var leftBtn = document.querySelector('.left-button');
+var rightBtn = document.querySelector('.right-button');
+
+leftBtn.addEventListener('click', typeme);
+rightBtn.addEventListener('click', typeme);
+
+
+function typeme() {
+    captionRight.toggleAttribute('hidden');
+}
+
 

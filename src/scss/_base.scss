@@ -126,61 +126,50 @@
 	.courses {
 		position: relative;
 
-		.caption {
+		.caption-left,
+		.caption-right {
 			position: absolute;
 			transition: all ease 1s;
 			display: flex;
 			flex-direction: row;
 			z-index: 1;
-		}
 
-		.caption_item {
-			width: 350px;
-			height: 520px;
-			background: #efefef;
-			margin: 50px 15px 0px 15px;
-			border-radius: 15px;
-			box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+			.caption_item {
+				width: 350px;
+				height: 520px;
+				background: #efefef;
+				margin: 50px 15px 0px 15px;
+				border-radius: 15px;
+				box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
 
-			h2 {
-				font-family: 'Fredoka One', cursive;
-				font-weight: bold;
-				font-size: 20px;
-				color: #607790;
-				text-align: center;
-			}
+				h2 {
+					font-family: 'Fredoka One', cursive;
+					font-weight: bold;
+					font-size: 20px;
+					color: #607790;
+					text-align: center;
+				}
 
-			.caption_item__text {
-				padding: 10px;
+				.caption_item__text {
+					padding: 10px;
 
-				.price {
-					color: #b61984;
-					font-weight: 900;
-					font-size: 18px;
+					.price {
+						color: #b61984;
+						font-weight: 900;
+						font-size: 18px;
+					}
 				}
 			}
+
+
+			img {
+				width: 350px;
+				border-radius: 15px 15px 0px 0px;
+			}
 		}
 
-		img {
-			width: 350px;
-			border-radius: 15px 15px 0px 0px;
+		.hidden {
+			display: none;
 		}
-
-		#left-button,
-		#right-button {
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
-			font-size: 30px;
-		}
-
-		#left-button {
-			left: 0;
-		}
-
-		#right-button {
-			right: 0;
-		}
-
 	}
 }
