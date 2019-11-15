@@ -34,6 +34,21 @@
 		text-align: center;
 	}
 
+	h1,
+	.title {
+		text-transform: uppercase;
+		font-family: 'Fredoka One', cursive;
+		font-weight: bold;
+		color: #ffcf47;
+	}
+
+	h1 {
+		font-size: 50px;
+	}
+
+	.title {
+		font-size: 30px;
+	}
 }
 
 
@@ -87,13 +102,6 @@
 			}
 		}
 
-		h1 {
-			text-transform: uppercase;
-			font-family: 'Fredoka One', cursive;
-			font-weight: bold;
-			color: #ffcf47;
-			font-size: 50px;
-		}
 	}
 }
 
@@ -123,15 +131,46 @@
 		}
 	}
 
+
+
 	.courses {
 		position: relative;
+		margin-bottom: 100px;
+
+		.left-button,
+		.right-button {
+			position: absolute;
+			font-size: 50px;
+			color: grey;
+			opacity: .8;
+			margin: 60px 0px;
+		}
+
+		.left-button:hover,
+		.right-button:hover {
+			color: #b61984;
+			cursor: pointer;
+		}
+
+		.left-button {
+			left: 5px;
+			padding: 200px 20px 200px 50px;
+		}
+
+		.right-button {
+			right: 5px;
+			padding: 200px 50px 200px 20px;
+		}
+
+		.clearfix::after {
+			content: "";
+			display: block;
+			clear: both;
+		}
 
 		.caption {
-			position: absolute;
-			transition: all ease 1s;
 			display: flex;
 			flex-direction: row;
-			z-index: 1;
 
 			.caption_item {
 				width: 350px;
@@ -173,3 +212,38 @@
 	}
 }
 
+.bottom {
+
+
+	.footer {
+		background: url('../img/31.png') no-repeat;
+		background-size: cover;
+		padding-top: 70px;
+
+		a:hover {
+			color: #ffcf47;
+		}
+
+		.footer_bottom-flex {
+			padding-top: 110px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+
+			.footer_nav ul li {
+				display: inline;
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
+
+		.footer_top-flex {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+		}
+
+	}
+
+}
