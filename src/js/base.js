@@ -1,25 +1,5 @@
-$(function () {
-    var fixblock_pos = $('#fixblock').position().top;
-    $(window).scroll(function () {
 
-        if ($(window).scrollTop() > fixblock_pos) {
-            $('#fixblock').css({
-                'position': 'fixed',
-                'top': '0px',
-                'background': 'white',
-                'width': '100%'
-            });
-        } else {
-            $('#fixblock').css({
-                'position': 'static',
-                'background': 'none'
-            });
-
-        }
-    })
-});
-
-/* для адаптивки*/
+// carousel
 var slides = document.querySelectorAll('.caption');
 var prevBtn = document.querySelector('.left-button');
 var nextBtn = document.querySelector('.right-button');
@@ -50,24 +30,47 @@ nextBtn.onclick = function () {
     plusSlides(1);
 }
 
-/*
-var captionRight = document.querySelector('.caption-right');
-var captionLeft = document.querySelector('.caption-left');
 
-var leftBtn = document.querySelector('.left-button');
-var rightBtn = document.querySelector('.right-button');
+// navbar
+$(function () {
+    var fixblock_pos = $('#fixblock').position().top;
+    $(window).scroll(function () {
 
-leftBtn.addEventListener('click', typeme);
-rightBtn.addEventListener('click', typeme);
+        if ($(window).scrollTop() > fixblock_pos) {
+            $('#fixblock').css({
+                'position': 'fixed',
+                'top': '0px',
+                'background': 'white',
+                'width': '100%'
+            });
+        } else {
+            $('#fixblock').css({
+                'position': 'static',
+                'background': 'none'
+            });
 
-
-function typeme() {
-    captionRight.toggleAttribute('hidden');
-}
-*/
+        }
+    })
+});
 
 var items = $('nav ul li');
 items.css('opacity', 0);
 for (var i = 0; i < items.length; i++) {
-  $(items[i]).delay(i * 400).animate({ opacity: 1 }, 400);
+    $(items[i]).delay(i * 400).animate({
+        opacity: 1
+    }, 400);
+}
+
+
+// accordion
+
+$(document).ready(function () {
+    $(".question").on('click', ShowAnswer);
+});
+
+function ShowAnswer() {
+    $(".info").not($(this).next()).slideUp(500);
+    $(this).next().slideToggle(500);
+    $(this).toggleClass("active");
+    $(".question").not($(this)).removeClass("active");
 }

@@ -4,8 +4,6 @@
 	box-sizing: border-box;
 }
 
-
-
 .container {
 	max-width: 1170px;
 	width: 100%;
@@ -46,11 +44,11 @@
 		font-size: 50px;
 	}
 
+
 	.title {
 		font-size: 30px;
 	}
 }
-
 
 .top {
 	background: url('../img/background0.png') no-repeat, url('../img/background1.png') no-repeat bottom;
@@ -88,20 +86,26 @@
 			font-size: 20px;
 			text-align: center;
 
+			p {
+				margin-bottom: 20px;
+			}
+
+
 			.hero__button {
 				background-color: #b61984;
 				color: #ffffff;
 				padding: 15px 60px;
 				border: 1px solid #b61984;
 				border-radius: 50px;
+				margin-top: 10px;
 			}
+
 
 			.hero__button:hover {
 				background-color: #ffffff;
 				color: #b61984;
 			}
 		}
-
 	}
 }
 
@@ -110,7 +114,7 @@
 	background: url('../img/background.png') no-repeat;
 	background-size: contain;
 
-	.body-content {
+	.advantages {
 		display: flex;
 		padding-top: 100px;
 
@@ -118,23 +122,65 @@
 			padding: 20px 100px 150px 150px;
 		}
 
-		.body-content__quality {
+		.advantages__quality {
 			background: url('../img/quality\ \(1\).png') no-repeat;
 		}
 
-		.body-content__groupOfPeople {
+		.advantages__groupOfPeople {
 			background: url('../img/group-of-people.png') no-repeat;
 		}
 
-		.body-content__students {
+		.advantages__students {
 			background: url('../img/graduate-cap\ \(3\).png') no-repeat;
+		}
+
+	}
+
+	.FAQ {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		.accordion {
+			width: 50%;
+
+			.accordion_item {
+				margin-top: 5px;
+			}
+
+			.question {
+				background: #018588;
+				color: white;
+				border-radius: 5px;
+				padding: 25px;
+			}
+
+			.question:hover {
+				cursor: pointer;
+			}
+
+			.question::after {
+				content: '∨';
+				float: right;
+			}
+
+			.active:after {
+				content: "∧";
+				float: right;
+			}
+
+			.info {
+				display: none;
+				padding: 10px 15px;
+			}
+
 		}
 	}
 
-
-
 	.courses {
 		position: relative;
+		margin-top: 100px;
 		margin-bottom: 100px;
 
 		.left-button,
@@ -171,7 +217,6 @@
 		.caption {
 			display: flex;
 			flex-direction: row;
-			
 
 			.caption_item {
 				width: 350px;
@@ -200,7 +245,6 @@
 				}
 			}
 
-
 			img {
 				width: 350px;
 				border-radius: 15px 15px 0px 0px;
@@ -214,7 +258,6 @@
 }
 
 .bottom {
-
 
 	.footer {
 		background: url('../img/31.png') no-repeat;
@@ -244,10 +287,5 @@
 			flex-direction: row;
 			justify-content: space-around;
 		}
-
 	}
-
 }
-
-
-
