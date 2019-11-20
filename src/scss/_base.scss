@@ -55,11 +55,13 @@
 	background-size: contain;
 
 	.header {
+
 		.header-flex {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: center;
+
 		}
 
 		.header_nav ul li,

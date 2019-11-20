@@ -40,17 +40,18 @@ $(function () {
                 'position': 'fixed',
                 'top': '0px',
                 'background': 'white',
-                'width': '100%'
+                'width': '100%',
+                'z-index': '999999999999',
             });
         } else {
             $('#fixblock').css({
                 'position': 'static',
-                'background': 'none'
+                'background': 'none',
             });
-
         }
     })
 });
+
 
 var items = $('nav ul li');
 items.css('opacity', 0);
@@ -59,7 +60,6 @@ for (var i = 0; i < items.length; i++) {
         opacity: 1
     }, 400);
 }
-
 
 // accordion
 
