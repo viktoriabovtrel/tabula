@@ -75,6 +75,8 @@
 	}
 
 	.hero {
+		padding-top: 100px;
+
 		.hero-flex {
 			display: flex;
 			flex-direction: row;
@@ -113,6 +115,7 @@
 .body {
 	background: url('../img/background.png') no-repeat;
 	background-size: contain;
+	padding-top: 100px;
 
 	.advantages {
 		display: flex;
@@ -263,6 +266,7 @@
 		background: url('../img/31.png') no-repeat;
 		background-size: cover;
 		padding-top: 70px;
+		padding-bottom: 10px;
 
 		a:hover {
 			color: #ffcf47;
