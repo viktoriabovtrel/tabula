@@ -42,23 +42,25 @@ $(function () {
                 'background': 'white',
                 'width': '100%',
                 'z-index': '999999999999',
+                'box-shadow': '0 0 15px 0 rgba(0, 0, 0, 0.5)'
             });
         } else {
             $('#fixblock').css({
                 'position': 'static',
                 'background': 'none',
+                'box-shadow': 'none'
             });
         }
     })
 });
 
 
-var items = $('nav ul li');
+var items = $('header nav ul li');
 items.css('opacity', 0);
 for (var i = 0; i < items.length; i++) {
-    $(items[i]).delay(i * 400).animate({
+    $(items[i]).delay(i * 500).animate({
         opacity: 1
-    }, 400);
+    }, 500);
 }
 
 // accordion
@@ -85,3 +87,26 @@ $(document).ready(function () {
         }, 1500);
     });
 });
+
+
+$(document).ready(function () {
+    $("nav", ".header_logo a").on("click", function (event) {
+        event.preventDefault();
+        var id = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(id).offset().top
+        }, 1500);
+    });
+});
+
+
+function slowScroll(id) {
+    event.preventDefault();
+    $('html, body').animate({
+        scrollTop: $(id).offset().top
+    }, 1500);
+    return false;
+}
+
+
+ 
