@@ -1,5 +1,5 @@
-// carousel
-var slides = document.querySelectorAll('.caption');
+// carousel 
+/*var slides = document.querySelectorAll('.caption');
 var prevBtn = document.querySelector('.left-button');
 var nextBtn = document.querySelector('.right-button');
 var slideIndex = 1;
@@ -27,7 +27,7 @@ prevBtn.onclick = function () {
 
 nextBtn.onclick = function () {
     plusSlides(1);
-}
+}*/
 
 
 // navbar
@@ -42,13 +42,15 @@ $(function () {
                 'background': 'white',
                 'width': '100%',
                 'z-index': '999999999999',
-                'box-shadow': '0 0 15px 0 rgba(0, 0, 0, 0.5)'
+                'box-shadow': '0 0 15px 0 rgba(0, 0, 0, 0.5)',
+                'transition': 'all 0.5s ease-out'
             });
         } else {
             $('#fixblock').css({
                 'position': 'static',
                 'background': 'none',
-                'box-shadow': 'none'
+                'box-shadow': 'none',
+                'transition': 'all 0.5s ease-out'
             });
         }
     })
@@ -107,6 +109,3 @@ function slowScroll(id) {
     }, 1500);
     return false;
 }
-
-
- 
