@@ -109,3 +109,21 @@ function slowScroll(id) {
     }, 1500);
     return false;
 }
+
+$(document).ready(function () {
+    $(".owl-carousel").owlCarousel({
+        nav: true,
+        autoplay: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            550: {
+                items: 2,
+            },
+            1000: {
+                items: 3,
+            }
+        }
+    });
+});
