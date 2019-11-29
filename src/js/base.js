@@ -112,16 +112,16 @@ function slowScroll(id) {
 
 $(document).ready(function () {
     $(".owl-carousel").owlCarousel({
-        nav: true,
         autoplay: true,
+        nav: true,
         responsive: {
             0: {
                 items: 1,
             },
-            550: {
+            481: {
                 items: 2,
             },
-            1000: {
+            992: {
                 items: 3,
             }
         }
