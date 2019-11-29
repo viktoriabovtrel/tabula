@@ -233,14 +233,22 @@
 		background: url('../img/31.png') no-repeat;
 		background-size: cover;
 		padding-top: 70px;
-		padding-bottom: 10px;
+		padding-bottom: 20px;
 
 		a:hover {
 			color: #ffcf47;
 		}
 
+		.footer_top {
+
+			div+.title {
+				padding-top: 15px;
+				padding-bottom: 15px;
+			}
+		}
+
 		.footer_bottom {
-			padding-top: 110px;
+			padding-top: 30px;
 
 			.footer_nav ul li {
 				display: inline;
@@ -296,33 +304,6 @@
 				.owl-next {
 					right: -10px;
 				}
-			}
-		}
-	}
-
-	.bottom {
-
-		.footer {
-
-			.footer_bottom {
-				padding-top: 0px;
-				margin-top: 20px;
-				text-align: center;
-			}
-
-			.footer_top {
-				text-align: center;
-
-
-				div+.title {
-					padding-top: 15px;
-					padding-bottom: 15px;
-				}
-			}
-
-			.footer_nav ul li {
-				padding-left: 15px;
-				padding-right: 15px;
 			}
 		}
 	}
@@ -403,34 +384,6 @@
 				.owl-next {
 					right: -5px;
 				}
-			}
-		}
-	}
-
-	.bottom {
-
-		.footer {
-			padding-top: 30px;
-
-			.footer_bottom {
-				padding-top: 0px;
-				margin-top: 20px;
-				text-align: center;
-			}
-
-			.footer_top {
-				text-align: center;
-
-
-				div+.title {
-					padding-top: 15px;
-					padding-bottom: 15px;
-				}
-			}
-
-			.footer_nav ul li {
-				padding-left: 15px;
-				padding-right: 15px;
 			}
 		}
 	}
@@ -547,31 +500,7 @@
 	.bottom {
 
 		.footer {
-			background: none;
-			background-color: #b61984;
 			padding-top: 30px;
-
-
-			.footer_bottom {
-				padding-top: 0px;
-				margin-top: 20px;
-				text-align: center;
-			}
-
-			.footer_top {
-				text-align: center;
-
-
-				div+.title {
-					padding-top: 15px;
-					padding-bottom: 15px;
-				}
-			}
-
-			.footer_nav ul li {
-				padding-left: 15px;
-				padding-right: 15px;
-			}
 		}
 	}
 }
@@ -624,13 +553,12 @@
 
 		.courses {
 
-
 			.caption {
 
 				.caption_item {
 					width: 90%;
-					height: auto;
-					margin-left: 23px;
+					height: 480px;
+					margin-left: 23.5px;
 				}
 
 				.owl-prev,
@@ -648,17 +576,18 @@
 				}
 			}
 		}
+	}
 
-		.bottom {
+	.bottom {
 
-			.footer {
-				background: none;
-				background-color: #b61984;
-				padding-top: 30px;
-			}
+		.footer {
+			background: none;
+			background-color: #b61984;
+			padding-top: 30px;
 		}
 	}
 }
+
 
 @media (max-width: 400px) {
 
@@ -668,6 +597,7 @@
 
 				.caption_item {
 					margin-left: 20px;
+					height: 450px;
 				}
 
 				.owl-prev,
@@ -694,6 +624,7 @@
 			.caption {
 
 				.caption_item {
+					height: 430px;
 					margin-left: 16px;
 				}
 			}
