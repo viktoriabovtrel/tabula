@@ -34,18 +34,6 @@ for (var i = 0; i < items.length; i++) {
     }, 500);
 }
 
-// accordion
-$(document).ready(function () {
-    $(".question").on('click', ShowAnswer);
-});
-
-function ShowAnswer() {
-    $(".info").not($(this).next()).slideUp(500);
-    $(this).next().slideToggle(500);
-    $(this).toggleClass("active");
-    $(".question").not($(this)).removeClass("active");
-}
-
 
 $(document).ready(function () {
     $("nav").on("click", "a", function (event) {
@@ -78,19 +66,38 @@ function slowScroll(id) {
     return false;
 }
 
+
+// accordion
+$(document).ready(function () {
+    $(".question").on('click', ShowAnswer);
+});
+
+function ShowAnswer() {
+    $(".info").not($(this).next()).slideUp(500);
+    $(this).next().slideToggle(500);
+    $(this).toggleClass("active");
+    $(".question").not($(this)).removeClass("active");
+}
+
+
+// carousel
 $(document).ready(function () {
     $(".owl-carousel").owlCarousel({
         autoplay: true,
         nav: true,
+        loop: true,
         responsive: {
             0: {
                 items: 1,
+                nav: false,
             },
             481: {
                 items: 2,
+                nav: false,
             },
             992: {
                 items: 3,
+                loop: false,
             }
         }
     });

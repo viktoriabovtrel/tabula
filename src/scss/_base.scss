@@ -1,3 +1,6 @@
+$mainColor:#b61984;
+
+
 * {
 	margin: 0;
 	padding: 0;
@@ -5,7 +8,7 @@
 }
 
 .container {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Montserrat', sans-serif; 
 	color: black;
 	font-size: 15px;
 	font-weight: bold;
@@ -16,7 +19,7 @@
 	}
 
 	a:hover {
-		color: #b61984;
+		color:$mainColor;
 	}
 
 	.text-uppercase {
@@ -68,7 +71,7 @@
 		}
 
 		.header_contacts a:hover {
-			color: #b61984;
+			color:$mainColor;
 		}
 	}
 
@@ -86,10 +89,10 @@
 
 
 			.hero__button {
-				background-color: #b61984;
+				background-color:$mainColor;
 				color: #ffffff;
 				padding: 15px 60px;
-				border: 1px solid #b61984;
+				border: 1px solid $mainColor;
 				border-radius: 50px;
 				margin-top: 10px;
 			}
@@ -97,7 +100,7 @@
 
 			.hero__button:hover {
 				background-color: #ffffff;
-				color: #b61984;
+				color:$mainColor;
 			}
 		}
 	}
@@ -192,7 +195,7 @@
 					padding: 10px;
 
 					.price {
-						color: #b61984;
+						color:$mainColor;
 						font-weight: 900;
 						font-size: 18px;
 					}
@@ -209,7 +212,8 @@
 				position: absolute;
 				font-size: 100px;
 				bottom: 220px;
-				color: #b61984;
+				opacity: .8;
+				color:$mainColor;
 			}
 
 			.owl-prev {
@@ -392,7 +396,7 @@
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
 	.container {
-		font-size: 11px;
+		font-size: 12px;
 
 		h1 {
 			font-size: 30px;
@@ -465,7 +469,7 @@
 			.caption {
 
 				.caption_item {
-					height: 450px;
+					height: 440px;
 
 					h2 {
 						font-size: 14px;
@@ -478,20 +482,6 @@
 							font-size: 13px;
 						}
 					}
-				}
-
-				.owl-prev,
-				.owl-next {
-					font-size: 80px;
-					bottom: 170px;
-				}
-
-				.owl-prev {
-					left: -3px;
-				}
-
-				.owl-next {
-					right: -3px;
 				}
 			}
 		}
@@ -509,10 +499,9 @@
 
 @media (max-width: 480px) {
 	.container {
-		font-size: 9px;
 
 		h1 {
-			font-size: 15px;
+			font-size: 20px;
 		}
 	}
 
@@ -521,14 +510,15 @@
 		.hero {
 
 			img {
-				display: none;
+				padding-top: 30px;
+				width: 100%;
 			}
 
 			.description {
 				width: 100%;
 
 				.hero__button {
-					padding: 2px 10px;
+					padding: 4px 10px;
 				}
 			}
 		}
@@ -556,23 +546,8 @@
 			.caption {
 
 				.caption_item {
-					width: 90%;
-					height: 480px;
-					margin-left: 23.5px;
-				}
-
-				.owl-prev,
-				.owl-next {
-					font-size: 70px;
-					bottom: 170px;
-				}
-
-				.owl-prev {
-					left: 10px;
-				}
-
-				.owl-next {
-					right: 10px;
+					width: 70%;
+					margin-left: 65px;
 				}
 			}
 		}
@@ -582,7 +557,7 @@
 
 		.footer {
 			background: none;
-			background-color: #b61984;
+			background-color:$mainColor;
 			padding-top: 30px;
 		}
 	}
@@ -596,36 +571,29 @@
 			.caption {
 
 				.caption_item {
-					margin-left: 20px;
-					height: 450px;
-				}
-
-				.owl-prev,
-				.owl-next {
-					font-size: 60px;
-					bottom: 170px;
-				}
-
-				.owl-prev {
-					left: 10px;
-				}
-
-				.owl-next {
-					right: 10px;
+					height: 420px;
+					margin-left: 55px;
 				}
 			}
 		}
 	}
 }
 
-@media (max-width: 360px) {
+@media (max-width: 350px) {
 	.body {
 		.courses {
 			.caption {
-
 				.caption_item {
-					height: 430px;
-					margin-left: 16px;
+					height: 410px;
+					margin-left: 47px;
+				}
+			}
+		}
+
+		.FAQ {
+			.accordion {
+				.question {
+					padding: 20px 15px;
 				}
 			}
 		}
