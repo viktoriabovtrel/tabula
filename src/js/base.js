@@ -1,4 +1,3 @@
-
 // navbar
 $(function () {
     var fixblock_pos = $('#fixblock').position().top;
@@ -24,15 +23,6 @@ $(function () {
         }
     })
 });
-
-
-var items = $('header nav ul li');
-items.css('opacity', 0);
-for (var i = 0; i < items.length; i++) {
-    $(items[i]).delay(i * 500).animate({
-        opacity: 1
-    }, 500);
-}
 
 
 $(document).ready(function () {
@@ -102,3 +92,16 @@ $(document).ready(function () {
         }
     });
 });
+
+$('.burger-menu__button').on('click', showMenu);
+$('.nav_link').on('click', showMenu);
+
+
+function showMenu() {
+    if ($('.burger-menu__nav').is(':hidden')) {
+        $('.burger-menu__nav').slideDown(1000);
+    } else {
+        $('.burger-menu__nav').slideUp(1000);
+    }
+    $('.burger-menu__button').toggleClass('active');
+}

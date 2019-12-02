@@ -8,7 +8,7 @@ $mainColor:#b61984;
 }
 
 .container {
-	font-family: 'Montserrat', sans-serif; 
+	font-family: 'Montserrat', sans-serif;
 	color: black;
 	font-size: 15px;
 	font-weight: bold;
@@ -19,7 +19,7 @@ $mainColor:#b61984;
 	}
 
 	a:hover {
-		color:$mainColor;
+		color: $mainColor;
 	}
 
 	.text-uppercase {
@@ -71,7 +71,69 @@ $mainColor:#b61984;
 		}
 
 		.header_contacts a:hover {
-			color:$mainColor;
+			color: $mainColor;
+		}
+
+		.burger-menu__button {
+			display: block;
+			position: absolute;
+			top: 5px;
+			right: 150px;
+			display: none;
+			margin-top: 5px;
+			z-index: 30;
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			background-color: $mainColor;
+			transition: 0.4s;
+		}
+
+
+		.burger-menu__button::before,
+		.active::before {
+			position: absolute;
+			font-size: 40px;
+			color: #ffffff;
+		}
+
+		.burger-menu__button::before {
+			top: 7px;
+			left: 16px;
+			content: "☰";
+		}
+
+		.active::before {
+			top: 6px;
+			left: 17.5px;
+			content: "✖";
+		}
+
+		.burger-menu__nav {
+			display: none;
+			padding-top: 150px;
+			position: fixed;
+			z-index: 20;
+			height: 70%;
+			background-color: $mainColor;
+			width: 100%;
+			right: 0px;
+			transition: opacity 2s ease;
+
+			ul li a {
+				color: #ffffff;
+				font-size: 15px;
+			}
+
+			ul li {
+				text-align: center;
+				padding-top: 15px;
+			}
+		}
+
+
+		.burger-menu__nav ul li {
+			display: block;
 		}
 	}
 
@@ -89,7 +151,7 @@ $mainColor:#b61984;
 
 
 			.hero__button {
-				background-color:$mainColor;
+				background-color: $mainColor;
 				color: #ffffff;
 				padding: 15px 60px;
 				border: 1px solid $mainColor;
@@ -100,7 +162,7 @@ $mainColor:#b61984;
 
 			.hero__button:hover {
 				background-color: #ffffff;
-				color:$mainColor;
+				color: $mainColor;
 			}
 		}
 	}
@@ -195,7 +257,7 @@ $mainColor:#b61984;
 					padding: 10px;
 
 					.price {
-						color:$mainColor;
+						color: $mainColor;
 						font-weight: 900;
 						font-size: 18px;
 					}
@@ -213,7 +275,7 @@ $mainColor:#b61984;
 				font-size: 100px;
 				bottom: 220px;
 				opacity: .8;
-				color:$mainColor;
+				color: $mainColor;
 			}
 
 			.owl-prev {
@@ -331,6 +393,22 @@ $mainColor:#b61984;
 
 	.top {
 
+		.header {
+			.header_nav {
+				display: none;
+			}
+
+			.burger-menu__button {
+				display: block;
+				right: 100px;
+			}
+
+			.burger-menu__nav {
+				padding-top: 10px;
+			}
+
+		}
+
 		.hero {
 			padding-top: 100px;
 
@@ -339,6 +417,7 @@ $mainColor:#b61984;
 			}
 
 			.description {
+				width: 50%;
 				padding-top: 30px;
 				font-size: 15px;
 			}
@@ -393,6 +472,26 @@ $mainColor:#b61984;
 	}
 }
 
+@media (max-width: 870px) {
+	.top {
+
+		.header {
+			.header_nav {
+				display: none;
+			}
+
+			.burger-menu__button {
+				display: block;
+				right: 90px;
+			}
+
+			.burger-menu__nav {
+				padding-top: 10px;
+			}
+		}
+	}
+}
+
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
 	.container {
@@ -409,14 +508,33 @@ $mainColor:#b61984;
 
 	.top {
 
+		.header {
+			.header_nav {
+				display: none;
+			}
+
+			.burger-menu__button {
+				display: block;
+				right: 50px;
+			}
+
+			.header_contacts,
+			.header_social-networks {
+				padding-top: 10px;
+				text-align: center;
+				padding-right: 40px;
+			}
+		}
+
 		.hero {
 			padding-top: 50px;
 
 			img {
-				width: 50%;
+				width: 45%;
 			}
 
 			.description {
+				width: 45%;
 				padding-top: 20px;
 				font-size: 12px;
 				margin-right: 30px;
@@ -507,6 +625,35 @@ $mainColor:#b61984;
 
 	.top {
 
+		.header {
+			.header_logo img {
+				width: 70px;
+			}
+
+			.header_nav {
+				display: none;
+			}
+
+			.burger-menu__button {
+				right: 50px;
+				width: 55px;
+				height: 55px;
+			}
+
+			.burger-menu__button::before,
+			.active::before {
+				top: 0.1px;
+				left: 9.5px;
+			}
+
+			.header_contacts,
+			.header_social-networks {
+				padding-top: 5px;
+				text-align: center;
+				padding-right: 30px;
+			}
+		}
+
 		.hero {
 
 			img {
@@ -557,7 +704,7 @@ $mainColor:#b61984;
 
 		.footer {
 			background: none;
-			background-color:$mainColor;
+			background-color: $mainColor;
 			padding-top: 30px;
 		}
 	}
@@ -565,6 +712,16 @@ $mainColor:#b61984;
 
 
 @media (max-width: 400px) {
+
+	.top {
+
+		.header {
+
+			.burger-menu__button {
+				right: 30px;
+			}
+		}
+	}
 
 	.body {
 		.courses {
