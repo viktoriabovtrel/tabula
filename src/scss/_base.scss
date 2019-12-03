@@ -57,8 +57,8 @@ $mainColor:#b61984;
 		.header_nav ul li,
 		.header_contacts .contacts__item {
 			display: inline;
-			padding-left: 15px;
-			padding-right: 15px;
+			padding-left: 10px;
+			padding-right: 10px;
 		}
 
 		.header_nav,
@@ -76,9 +76,7 @@ $mainColor:#b61984;
 
 		.burger-menu__button {
 			display: block;
-			position: absolute;
-			top: 5px;
-			right: 150px;
+			position: fixed;
 			display: none;
 			margin-top: 5px;
 			z-index: 30;
@@ -384,8 +382,8 @@ $mainColor:#b61984;
 			}
 
 			.footer_nav ul li:not(:first-child) {
-				padding-left: 15px;
-				padding-right: 15px;
+				padding-left: 10px;
+				padding-right: 10px;
 			}
 		}
 	}
@@ -551,13 +549,8 @@ $mainColor:#b61984;
 	.top {
 
 		.header {
-			.header_nav {
-				display: none;
-			}
-
 			.burger-menu__button {
-				display: block;
-				right: 90px;
+				right: 70px;
 			}
 		}
 	}
@@ -586,7 +579,7 @@ $mainColor:#b61984;
 
 			.burger-menu__button {
 				display: block;
-				right: 50px;
+				right: 15px;
 			}
 
 			.header_contacts,
@@ -720,6 +713,16 @@ $mainColor:#b61984;
 			}
 		}
 	}
+
+	.bottom {
+
+		.footer {
+			background: none;
+			background-color: $mainColor;
+			padding-top: 30px;
+		}
+	}
+
 }
 
 @media (max-width: 550px) {
@@ -755,15 +758,14 @@ $mainColor:#b61984;
 			}
 
 			.burger-menu__button {
-				right: 50px;
-				width: 55px;
-				height: 55px;
+				width: 60px;
+				height: 60px;
 			}
 
 			.burger-menu__button::before,
 			.active::before {
-				top: 0.1px;
-				left: 9.5px;
+				top: 0.5px;
+				left: 11px;
 			}
 
 			.header_contacts,
@@ -826,30 +828,10 @@ $mainColor:#b61984;
 			}
 		}
 	}
-
-
-	.bottom {
-
-		.footer {
-			background: none;
-			background-color: $mainColor;
-			padding-top: 30px;
-		}
-	}
 }
 
 
 @media (max-width: 400px) {
-
-	.top {
-
-		.header {
-
-			.burger-menu__button {
-				right: 30px;
-			}
-		}
-	}
 
 	.body {
 		.courses {

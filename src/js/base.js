@@ -1,5 +1,9 @@
 // navbar
-$(function () {
+if (window.matchMedia('(max-width: 992px)')) {
+    makeFixedBlock;
+}
+
+function makeFixedBlock() {
     var fixblock_pos = $('#fixblock').position().top;
     $(window).scroll(function () {
 
@@ -22,7 +26,7 @@ $(function () {
             });
         }
     })
-});
+};
 
 
 $(document).ready(function () {
