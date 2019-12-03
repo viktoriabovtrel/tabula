@@ -672,6 +672,7 @@ $mainColor:#b61984;
 
 
 		.signUp {
+			padding-top: 0px;
 
 			img {
 				width: 40%;
@@ -765,7 +766,7 @@ $mainColor:#b61984;
 			.burger-menu__button::before,
 			.active::before {
 				top: 0.5px;
-				left: 11px;
+				left: 12px;
 			}
 
 			.header_contacts,
