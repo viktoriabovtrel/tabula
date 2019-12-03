@@ -105,3 +105,8 @@ function showMenu() {
     }
     $('.burger-menu__button').toggleClass('active');
 }
+
+new WOW().init();
+
+
+$('.phone_with_ddd').mask('+375(00)000-00-00');
