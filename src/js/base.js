@@ -41,23 +41,27 @@ $(document).ready(function () {
 });
 
 
-$(document).ready(function () {
-    $("nav", ".header_logo a").on("click", function (event) {
-        event.preventDefault();
-        var id = $(this).attr('href');
-        $('html, body').animate({
-            scrollTop: $(id).offset().top
-        }, 1500);
-    });
-});
-
-
 function slowScroll(id) {
     event.preventDefault();
     $('html, body').animate({
         scrollTop: $(id).offset().top
     }, 1500);
     return false;
+}
+
+
+//burger-menu
+$('.burger-menu__button').on('click', showMenu);
+$('.nav_link').on('click', showMenu);
+
+
+function showMenu() {
+    if ($('.burger-menu__nav').is(':hidden')) {
+        $('.burger-menu__nav').slideDown(1000);
+    } else {
+        $('.burger-menu__nav').slideUp(1000);
+    }
+    $('.burger-menu__button').toggleClass('active');
 }
 
 
@@ -97,29 +101,17 @@ $(document).ready(function () {
     });
 });
 
-$('.burger-menu__button').on('click', showMenu);
-$('.nav_link').on('click', showMenu);
 
-
-function showMenu() {
-    if ($('.burger-menu__nav').is(':hidden')) {
-        $('.burger-menu__nav').slideDown(1000);
-    } else {
-        $('.burger-menu__nav').slideUp(1000);
-    }
-    $('.burger-menu__button').toggleClass('active');
-}
-
+//animation
 new WOW().init();
 
-//form 
 
+//form 
 $('.phone_with_ddd').mask('+375(00)000-00-00');
 
 var sendMsg = $('.form_button'),
     firstName = $('.name'),
     mobileTel = $('.phone_with_ddd'),
-    email = $('.email'),
     select = $('.select'),
     message = $('.message'),
     form = $('#form'),
@@ -129,7 +121,7 @@ var sendMsg = $('.form_button'),
 sendMsg.on('click', function () {
     checkInputs();
     if (firstName.val() && mobileTel.val()) {
-        msg = 'Name: ' + firstName.val() + ' ' + '; Tel: ' + mobileTel.val() + ' ' + '; Email: ' + email.val() + ' ' + '; Курсы: ' + select.val() + ' ' + '; Сообщение:' + message.val() + ' ';
+        msg = 'Name: ' + firstName.val() + ' ' + '; Tel: ' + mobileTel.val() + ' ' + '; Курсы: ' + select.val() + ' ' + '; Сообщение:' + message.val() + ' ';
         var botLink = 'https://api.telegram.org/bot990544176:AAHPjG6kAOzqy7sRMNeObkE7wty8zlj8MfU/sendMessage?chat_id=496675570&text=' + msg;
         fetch(botLink);
         form.addClass('hidden');
