@@ -226,22 +226,27 @@
       <div class="container">
         <div class="row">
           <img class="wow rotateInDownRight col-lg-6 col-md-6 col-sm-6 col-xs-12" src="img/home_inner_03.png" alt="pic">
-          <form id="form" class="form col-lg-6 col-md-6 col-sm-6 col-xs-12" method="POST">
-            <p><input placeholder="Ваше имя" name="name" type="text" required></p>
-            <p><input class="phone_with_ddd" placeholder="Ваш телефон" name="tel" type="tel" required></p>
-            <p><input placeholder="Ваш email" name="email" type="email" required></p>
-            <select>
-              <option>Коммуникативный английский A1-C1</option>
-              <option>Деловой английский</option>
-              <option>Английский для детей</option>
-              <option>Английский для подготовки к <abbr>IELTS</abbr></option>
-              <option>Киноклуб на английском языке</option>
-              <option>Разговорный клуб на английском языке</option>
-            </select>
-            <p><textarea placeholder="Дополнительная информация" rows="6" type="text" name="message"></textarea>
-            </p>
-            <input class="form_button" type="submit" value="Записаться">
-          </form>
+          <div class="form col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <p class="text hidden">Сообщение успешно отправлено. <br />В ближайшее время с Вами свяжется наш сотрудник.
+              <br /><span class="title">tabula</span></span></p>
+            <form id="form">
+              <p><input class="name" placeholder="Ваше имя" name="name" type="text" required></p>
+              <p><input class="phone_with_ddd" placeholder="Ваш телефон" name="tel" type="tel" required></p>
+              <p><input class="email" placeholder="Ваш email" name="email" type="email" required></p>
+              <select class="select">
+                <option>Коммуникативный английский A1-C1</option>
+                <option>Деловой английский</option>
+                <option>Английский для детей</option>
+                <option>Английский для подготовки к <abbr>IELTS</abbr></option>
+                <option>Киноклуб на английском языке</option>
+                <option>Разговорный клуб на английском языке</option>
+              </select>
+              <p><textarea class="message" placeholder="Дополнительная информация" rows="6" type="text"
+                  name="message"></textarea>
+              </p>
+            </form>
+            <p><input class="form_button" type="submit" value="Записаться"></p>
+          </div>
         </div>
       </div>
     </div>

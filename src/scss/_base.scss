@@ -312,25 +312,41 @@ $mainColor:#b61984;
 			border-radius: 15px;
 			box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
 
-			p input,
-			p textarea,
-			select {
-				padding: 5px;
-				border-radius: 9px;
-				border: 1px solid rgba(0, 0, 0, .1);
-				width: 100%;
-				outline: none;
+			p {
+				text-align: center;
 			}
 
-			select {
-				color: #757575;
-				padding-left: 2px;
-				cursor: pointer;
+			.text {
+				margin-top: 130px;
 			}
 
-			p textarea {
-				margin-top: 10px;
-				resize: none;
+			#form {
+
+				p input,
+				p textarea,
+				select {
+					padding: 5px;
+					border-radius: 9px;
+					border: 1px solid rgba(0, 0, 0, .1);
+					width: 100%;
+					outline: none;
+				}
+
+				select {
+					color: #757575;
+					padding-left: 2px;
+					cursor: pointer;
+				}
+
+				p textarea {
+					margin-top: 10px;
+					resize: none;
+				}
+
+				.empty {
+					border: 1px solid #ff66cc;
+				}
+
 			}
 
 			.form_button {
@@ -339,16 +355,13 @@ $mainColor:#b61984;
 				padding: 15px 60px;
 				border: 1px solid $mainColor;
 				border-radius: 50px;
+				outline: none;
 			}
 
 			.form_button:hover {
 				background: #ffffff;
 				color: $mainColor;
 			}
-		}
-
-		.form:last-child {
-			text-align: center;
 		}
 
 	}
@@ -531,6 +544,12 @@ $mainColor:#b61984;
 
 
 		.signUp {
+			.form {
+				.text {
+					margin-top: 110px;
+				}
+			}
+
 			padding-right: 25px;
 
 			img {
@@ -765,7 +784,7 @@ $mainColor:#b61984;
 
 			.burger-menu__button::before,
 			.active::before {
-				top: 0.5px;
+				top: 0.7px;
 				left: 12px;
 			}
 
@@ -875,6 +894,10 @@ $mainColor:#b61984;
 		.signUp {
 			.form {
 				margin-left: 50px;
+
+				.text{
+					margin-top: 115px;
+				}
 			}
 		}
 	}

@@ -112,5 +112,41 @@ function showMenu() {
 
 new WOW().init();
 
+//form 
 
 $('.phone_with_ddd').mask('+375(00)000-00-00');
+
+var sendMsg = $('.form_button'),
+    firstName = $('.name'),
+    mobileTel = $('.phone_with_ddd'),
+    email = $('.email'),
+    select = $('.select'),
+    message = $('.message'),
+    form = $('#form'),
+    text = $('.text'),
+    msg;
+
+sendMsg.on('click', function () {
+    checkInputs();
+    if (firstName.val() && mobileTel.val()) {
+        msg = 'Name: ' + firstName.val() + ' ' + '; Tel: ' + mobileTel.val() + ' ' + '; Email: ' + email.val() + ' ' + '; Курсы: ' + select.val() + ' ' + '; Сообщение:' + message.val() + ' ';
+        var botLink = 'https://api.telegram.org/bot990544176:AAHPjG6kAOzqy7sRMNeObkE7wty8zlj8MfU/sendMessage?chat_id=496675570&text=' + msg;
+        fetch(botLink);
+        form.addClass('hidden');
+        sendMsg.addClass('hidden');
+        text.removeClass('hidden')
+    } else {
+        return false;
+    }
+})
+
+function checkInputs() {
+    var inputs = $('#form input')
+    for (i = 0; i < inputs.length; i++) {
+        if (!inputs.val()) {
+            inputs.addClass('empty');
+        } else {
+            continue;
+        }
+    }
+};
