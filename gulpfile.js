@@ -11,8 +11,7 @@ var gulp = require('gulp'),
     cssmin = require('gulp-clean-css'),
     imagemin = require('gulp-imagemin'),
     rimraf = require('rimraf'),
-    browserSync = require("browser-sync"),
-    reload = browserSync.reload;
+    webserver = require("gulp-webserver");
 
 // paths
 var path = {
@@ -43,24 +42,13 @@ var path = {
     clean: './build'
 };
 
-// configs
-var config = {
-    server: {
-        baseDir: "./build"
-    },
-    //tunnel: true,
-    host: 'localhost',
-    port: 3000
-};
-
 //build
 
 function html(){
     return gulp
         .src(path.src.html)
         .pipe(rigger())
-        .pipe(gulp.dest(path.build.html))
-        .pipe(browserSync.stream());
+        .pipe(gulp.dest(path.build.html));
 }
 
 function vendor(){
@@ -70,8 +58,7 @@ function vendor(){
         .pipe(sourcemaps.init())
         .pipe(uglify())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(path.build.vendor))
-        .pipe(browserSync.stream());
+        .pipe(gulp.dest(path.build.vendor));
 }
 
 function js(){
@@ -81,8 +68,7 @@ function js(){
         .pipe(sourcemaps.init())
         .pipe(uglify())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(path.build.js))
-        .pipe(browserSync.stream());
+        .pipe(gulp.dest(path.build.js));
 }
 
 function css(){
@@ -94,15 +80,13 @@ function css(){
         .pipe(prefixer())
         .pipe(cssmin())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(path.build.css))
-        .pipe(browserSync.stream());
+        .pipe(gulp.dest(path.build.css));
 }
 
 function img(){
     return gulp
         .src(path.src.img)
-        .pipe(gulp.dest(path.build.img))
-        .pipe(browserSync.stream());
+        .pipe(gulp.dest(path.build.img));
 }
 
 function fonts(){
@@ -126,7 +110,12 @@ gulp.task('watch', function(){
 
 
 gulp.task('webserver', function () {
-    browserSync(config);
+    gulp.src('build')
+        .pipe(webserver({
+            host: '0.0.0.0',
+            port: 3000,
+
+        }));
 });
 
 gulp.task('clean', function (cb) {
